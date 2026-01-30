@@ -196,6 +196,7 @@ export default function SalesOverview() {
                       width={14}
                       height={14}
                       alt="change"
+                      className="w-4 sm:w-3.5 aspect-square"
                       src={
                         overview.isIncrement
                           ? "/svgs/increment.svg"
@@ -203,7 +204,7 @@ export default function SalesOverview() {
                       }
                     />
                     <p
-                      className={`text-xs ${overview?.isIncrement ? "text-[#12B76A]" : "text-[#F04438]"}`}
+                      className={`text-sm sm:text-xs ${overview?.isIncrement ? "text-[#12B76A]" : "text-[#F04438]"}`}
                     >
                       {overview.change}
                     </p>
