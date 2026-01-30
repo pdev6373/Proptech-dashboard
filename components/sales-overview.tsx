@@ -109,7 +109,7 @@ export default function SalesOverview() {
         </div>
 
         <div className="p-4 flex flex-col min-[1350px]:flex-row gap-7 min-[1350px]:gap-6">
-          <div className="relative overflow-x-auto sm:overflow-x-visible flex items-end justify-between gap-4 shrink-0 px-3 sm:px-7 lg:px-6 h-40 min-[1350px]:h-auto">
+          <div className="relative overflow-x-auto sm:overflow-x-visible flex items-end justify-between gap-4 shrink-0 px-1 sm:px-7 lg:px-6 h-40 min-[1350px]:h-auto">
             <button className="absolute hidden sm:block left-0 lg:-left-1.5 top-1/2 z-10">
               <Image
                 width={18}
