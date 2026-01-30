@@ -165,7 +165,7 @@ export default function SalesOverview() {
                     })}
                   </div>
 
-                  <p className="text-xs text-[#919191] font-medium">
+                  <p className="text-sm sm:text-xs text-[#919191] font-medium">
                     {data.month}
                   </p>
                 </div>
