@@ -105,7 +105,7 @@ const LISTINGS: ListingProps[] = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen md:h-auto min-h-screen overflow-y-hidden md:overflow-y-visible bg-[#fbfcfc]">
+    <div className="flex flex-col h-dvh md:h-auto min-h-screen overflow-y-hidden md:overflow-y-visible bg-[#fbfcfc]">
       <Header profile={PROFILE} />
       <div className="hidden md:block sticky top-0 right-0 left-0 z-50 border-b border-[#F4F4F5] py-3 px-7 lg:px-8 bg-white">
         <Nav />
