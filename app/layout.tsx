@@ -1,15 +1,26 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const euclidCircularB = localFont({
+  src: [
+    {
+      weight: "400",
+      path: "../public/fonts/Euclid Circular B Regular.ttf",
+    },
+    {
+      weight: "500",
+      path: "../public/fonts/Euclid Circular B Medium.ttf",
+    },
+    {
+      weight: "600",
+      path: "../public/fonts/Euclid Circular B SemiBold.ttf",
+    },
+    {
+      weight: "700",
+      path: "../public/fonts/Euclid Circular B Bold.ttf",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -24,11 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={euclidCircularB.className}>{children}</body>
     </html>
   );
 }
