@@ -55,13 +55,13 @@ export default function Nav() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <nav className="flex md:flex-row gap-2">
+    <nav className="flex md:flex-row sm:gap-2">
       {NAV_ITEMS.map((item, index) => (
         <Link
           key={index}
           href={item.href}
           onClick={() => setActiveIndex(index)}
-          className={`shrink-0 group relative flex-1 p-4.5 md:py-1.5 md:px-2  lg:py-2 flex justify-center items-center gap-1 lg:gap-2 rounded-none md:rounded-lg transition-all duration-300 ease-out overflow-hidden ${
+          className={`shrink-0 group relative flex-1 p-4.5 pb-5.5  md:py-1.5 md:px-2  lg:py-2 flex justify-center items-center gap-1 lg:gap-2 rounded-none md:rounded-lg transition-all duration-300 ease-out overflow-hidden ${
             index === activeIndex
               ? "bg-[#176D5826]/30 md:bg-[#176D5826]"
               : "bg-transparent hover:bg-[#176D5826]/50 transition-discrete"

@@ -96,12 +96,12 @@ export default function SalesOverview() {
       </div>
 
       <div>
-        <div className="border-b border-[#E4E4E4] pt-4 pb-3 sm:pt-3 px-3 sm:px-4 md:px-5 flex justify-end gap-1.5 sm:gap-3">
+        <div className="border-b border-[#E4E4E4]  py-2.5 px-3 sm:p-3 sm:px-4 md:px-5 flex justify-end gap-0.5 sm:gap-3">
           {DURATIONS.map((duration) => (
             <button
               key={duration.value}
               onClick={() => setSelectedDuration(duration.value)}
-              className={`cursor-pointer text-sm text-[#3D3D3D] py-1.5 md:py-2 px-3.5 rounded-lg ${selectedDuration == duration?.value ? "font-semibold bg-[#F5F5F5]" : "font-normal"} transition-all duration-300`}
+              className={`cursor-pointer text-xs sm:text-sm text-[#3D3D3D] py-1.5 md:py-2 px-3.5 rounded-md sm:rounded-lg ${selectedDuration == duration?.value ? "font-semibold bg-[#F5F5F5]" : "font-normal"} transition-all duration-300`}
             >
               {duration.label}
             </button>
