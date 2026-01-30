@@ -187,7 +187,7 @@ export default function SalesOverview() {
                 </p>
 
                 <div className="flex items-center gap-2">
-                  <p className="text-[#3D3D3D] text-xs font-medium">
+                  <p className="text-[#3D3D3D] text-sm sm:text-xs font-medium">
                     {overview.label}
                   </p>
 
