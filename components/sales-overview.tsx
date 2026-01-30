@@ -90,7 +90,7 @@ export default function SalesOverview() {
           </p>
         </div>
 
-        <button className="w-full sm:w-auto border border-[#D6D6D6] rounded-full overflow-hidden py-2 px-3 md:px-7 cursor-pointer hover:bg-[#F9FAFB] transition-all">
+        <button className="text-sm sm:text-base w-full sm:w-auto border border-[#D6D6D6] rounded-full overflow-hidden py-2 px-3 md:px-7 cursor-pointer hover:bg-[#F9FAFB] transition-all">
           View Transactions
         </button>
       </div>
