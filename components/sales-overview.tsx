@@ -101,7 +101,7 @@ export default function SalesOverview() {
             <button
               key={duration.value}
               onClick={() => setSelectedDuration(duration.value)}
-              className={`cursor-pointer text-xs sm:text-sm text-[#3D3D3D] py-1.5 md:py-2 px-3.5 rounded-md sm:rounded-lg ${selectedDuration == duration?.value ? "font-semibold bg-[#F5F5F5]" : "font-normal"} transition-all duration-300`}
+              className={`cursor-pointer text-sm text-[#3D3D3D] py-1.5 md:py-2 px-3.5 rounded-md sm:rounded-lg ${selectedDuration == duration?.value ? "font-semibold bg-[#F5F5F5]" : "font-normal"} transition-all duration-300`}
             >
               {duration.label}
             </button>
