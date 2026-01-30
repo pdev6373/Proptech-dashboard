@@ -54,7 +54,7 @@ export default function Header({ profile }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#105B48] border-b border-[#F4F4F5]">
+    <header className="sticky left-0 right-0 top-0 md:static bg-[#105B48] border-b border-[#F4F4F5]">
       <div className="max-w-400 mx-auto px-4 sm:px-6 md:px-7 lg:px-8 py-4.5 sm:py-2 md:py-3">
         <div className="flex items-center justify-between">
           <Image
