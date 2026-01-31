@@ -43,62 +43,38 @@ const UsersOverview: OverviewProps = {
 const LISTINGS: ListingProps[] = [
   {
     id: "1",
-    category: "Most CLICKED",
+    category: "Most Clicked",
     title: "Urban Prime Plaza Premiere",
     images: [
       "/images/listing-image-one.jpg",
       "/images/listing-image-two.png",
       "/images/listing-image-three.jpg",
+      "/images/listing-image-one.jpg",
+      "/images/listing-image-two.png",
     ],
   },
   {
     id: "2",
-    category: "Most CLICKED",
+    category: "most Watchlisted",
     title: "Urban Prime Plaza Premiere",
     images: [
       "/images/listing-image-two.png",
       "/images/listing-image-three.jpg",
       "/images/listing-image-one.jpg",
+      "/images/listing-image-two.png",
+      "/images/listing-image-three.jpg",
     ],
   },
   {
     id: "3",
-    category: "Most CLICKED",
+    category: "Hottest Listing",
     title: "Urban Prime Plaza Premiere",
     images: [
       "/images/listing-image-three.jpg",
       "/images/listing-image-one.jpg",
       "/images/listing-image-two.png",
-    ],
-  },
-  {
-    id: "4",
-    category: "Most CLICKED",
-    title: "Urban Prime Plaza Premiere",
-    images: [
-      "/images/listing-image-two.png",
       "/images/listing-image-three.jpg",
       "/images/listing-image-one.jpg",
-    ],
-  },
-  {
-    id: "5",
-    category: "Most CLICKED",
-    title: "Urban Prime Plaza Premiere",
-    images: [
-      "/images/listing-image-three.jpg",
-      "/images/listing-image-one.jpg",
-      "/images/listing-image-two.png",
-    ],
-  },
-  {
-    id: "6",
-    category: "Most CLICKED",
-    title: "Urban Prime Plaza Premiere",
-    images: [
-      "/images/listing-image-one.jpg",
-      "/images/listing-image-two.png",
-      "/images/listing-image-three.jpg",
     ],
   },
 ];
