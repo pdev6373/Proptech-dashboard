@@ -2,6 +2,11 @@
 import Modal from ".";
 import Image from "next/image";
 
+type BudgetingModal = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
 const OPTIONS = [
   {
     icon: "/svgs/settings.svg",
@@ -22,11 +27,6 @@ const OPTIONS = [
       "Edit amounts, apply percentage changes, or roll forward last year's data—all in one place.",
   },
 ];
-
-type BudgetingModal = {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
 
 export default function BudgetingModal({ isOpen, setIsOpen }: BudgetingModal) {
   return (

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Profile } from "@/app/page";
 import BudgetingModal from "../modals/budgeting-modal";
+import CalendarDrawer from "../drawers/calendar-drawer";
 
 type HeaderProps = {
   profile: Profile;
@@ -20,6 +21,7 @@ type NavItem = {
 export default function Header({ profile }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   const NAV_ITEMS: NavItem[] = [
     {
@@ -33,25 +35,25 @@ export default function Header({ profile }: HeaderProps) {
       width: 26,
       label: "Calendar",
       icon: "/svgs/calendar.svg",
-      onClick: () => setIsModalOpen((prev) => !prev),
+      onClick: () => setIsCalendarOpen((prev) => !prev),
     },
     {
       width: 24,
+      onClick: () => {},
       label: "Documents",
       icon: "/svgs/document-text.svg",
-      onClick: () => setIsModalOpen((prev) => !prev),
     },
     {
       width: 26,
+      onClick: () => {},
       label: "Payout Center",
       icon: "/svgs/payout-center.svg",
-      onClick: () => setIsModalOpen((prev) => !prev),
     },
     {
       width: 24,
+      onClick: () => {},
       label: "Marketplace",
       icon: "/svgs/marketplace.svg",
-      onClick: () => setIsModalOpen((prev) => !prev),
     },
   ];
 
@@ -162,6 +164,7 @@ export default function Header({ profile }: HeaderProps) {
       </div>
 
       <BudgetingModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+      <CalendarDrawer isOpen={isCalendarOpen} setIsOpen={setIsCalendarOpen} />
     </header>
   );
 }
