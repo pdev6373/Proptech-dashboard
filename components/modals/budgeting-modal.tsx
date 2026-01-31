@@ -31,7 +31,7 @@ const OPTIONS = [
 export default function BudgetingModal({ isOpen, setIsOpen }: BudgetingModal) {
   return (
     <Modal size="md" isOpen={isOpen} onClose={() => setIsOpen(false)}>
-      <div className="rounded-t-md sm:rounded-b-md overflow-hidden">
+      <div className="rounded-t-lg sm:rounded-b-md overflow-hidden">
         <div className="bg-[#0C2841] aspect-438/213 relative">
           <Image
             fill
@@ -40,7 +40,7 @@ export default function BudgetingModal({ isOpen, setIsOpen }: BudgetingModal) {
           />
         </div>
 
-        <div className="flex flex-col gap-5 sm:gap-6 p-4 sm:p-6">
+        <div className="flex flex-col gap-6 p-4 sm:p-6">
           <div className="flex flex-col gap-5">
             {OPTIONS.map((option) => (
               <div className="w-full flex items-center gap-3">

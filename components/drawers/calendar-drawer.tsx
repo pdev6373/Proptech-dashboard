@@ -163,8 +163,8 @@ export default function CalendarDrawer({ isOpen, setIsOpen }: CalendarDrawer) {
   return (
     <Drawer size="md" isOpen={isOpen} onClose={() => setIsOpen(false)}>
       <div className="bg-[#0D0D0D] text-white w-full h-full flex flex-col">
-        <header className="sticky top-0 left-0 right-0 z-10 flex items-center justify-between gap-5 px-4 py-2.5 bg-[#171717]">
-          <div className="flex items-center gap-2">
+        <header className="sticky top-0 left-0 right-0 z-10 flex items-center justify-between gap-5 px-3 sm:px-4 py-2.5 bg-[#171717]">
+          <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={() => setIsOpen(false)}
               className="hover:bg-[#0D0D0D]/70 p-2 rounded-md transition-colors cursor-pointer"

@@ -67,7 +67,7 @@ export default function Modal({
       <div
         tabIndex={-1}
         ref={modalRef}
-        className={`relative z-60 w-full ${sizeClasses[size]} bg-white rounded-t-lg sm:rounded-b-lg shadow-xl animate-slideUp flex flex-col max-h-[calc(100dvh-40px)]`}
+        className={`relative z-60 w-full ${sizeClasses[size]} bg-white rounded-t-xl sm:rounded-b-lg shadow-xl animate-slideUp flex flex-col max-h-[calc(100dvh-40px)]`}
       >
         <div className="overflow-y-auto flex-1">{children}</div>
       </div>
