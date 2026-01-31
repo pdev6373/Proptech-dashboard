@@ -115,7 +115,7 @@ export default function Home() {
         <div className="px-4 sm:px-6 md:px-7 lg:px-8 flex flex-col gap-4 md:gap-5">
           <Greetings profile={PROFILE} />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-5 justify-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-5 justify-start items-start min-[1350px]:justify-stretch min-[1350px]:items-stretch">
             <div className="lg:col-span-2">
               <SalesOverview />
             </div>
