@@ -45,7 +45,7 @@ export default function Listing({ images, title, category }: ListingProps) {
         ))}
       </Swiper>
 
-      <div className="absolute inset-0 p-4 pb-7 sm:p-6 flex flex-col justify-end text-white pointer-events-none z-10">
+      <div className="absolute inset-0 p-4 pb-7 sm:p-6 sm:pb-6 flex flex-col justify-end text-white pointer-events-none z-10">
         <div className="text-xs sm:text-sm font-medium uppercase">
           {category}
         </div>
