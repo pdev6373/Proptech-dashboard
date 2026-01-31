@@ -3,55 +3,57 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { Profile } from "@/app/page";
+import BudgetingModal from "../modals/budgeting-modal";
 
 type HeaderProps = {
   profile: Profile;
 };
 
 type NavItem = {
-  href: string;
   icon: string;
   label: string;
   width: number;
+  onClick: () => void;
   aspectRatio?: number;
 };
 
-const NAV_ITEMS: NavItem[] = [
-  {
-    href: "/",
-    width: 28,
-    label: "Budgeting",
-    aspectRatio: 28 / 36,
-    icon: "/svgs/budgeting.svg",
-  },
-  {
-    href: "/",
-    width: 26,
-    label: "Calendar",
-    icon: "/svgs/calendar.svg",
-  },
-  {
-    href: "/",
-    width: 24,
-    label: "Documents",
-    icon: "/svgs/document-text.svg",
-  },
-  {
-    href: "/",
-    width: 26,
-    label: "Payout Center",
-    icon: "/svgs/payout-center.svg",
-  },
-  {
-    href: "/",
-    width: 24,
-    label: "Marketplace",
-    icon: "/svgs/marketplace.svg",
-  },
-];
-
 export default function Header({ profile }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const NAV_ITEMS: NavItem[] = [
+    {
+      width: 28,
+      label: "Budgeting",
+      aspectRatio: 28 / 36,
+      icon: "/svgs/budgeting.svg",
+      onClick: () => setIsModalOpen((prev) => !prev),
+    },
+    {
+      width: 26,
+      label: "Calendar",
+      icon: "/svgs/calendar.svg",
+      onClick: () => setIsModalOpen((prev) => !prev),
+    },
+    {
+      width: 24,
+      label: "Documents",
+      icon: "/svgs/document-text.svg",
+      onClick: () => setIsModalOpen((prev) => !prev),
+    },
+    {
+      width: 26,
+      label: "Payout Center",
+      icon: "/svgs/payout-center.svg",
+      onClick: () => setIsModalOpen((prev) => !prev),
+    },
+    {
+      width: 24,
+      label: "Marketplace",
+      icon: "/svgs/marketplace.svg",
+      onClick: () => setIsModalOpen((prev) => !prev),
+    },
+  ];
 
   return (
     <header className="sticky left-0 right-0 top-0 md:static bg-[#105B48] border-b border-[#F4F4F5]">
@@ -68,10 +70,10 @@ export default function Header({ profile }: HeaderProps) {
           <div className="flex items-center gap-4 sm:gap-5 md:gap-6">
             <nav className="hidden sm:flex sm:gap-px md:gap-1.5 shrink-0">
               {NAV_ITEMS.map((item, index) => (
-                <Link
+                <button
                   key={index}
-                  href={item.href}
-                  className="group relative p-3 aspect-square shrink-0 flex justify-center items-center rounded-full overflow-hidden"
+                  onClick={item.onClick}
+                  className="cursor-pointer group relative p-3 aspect-square shrink-0 flex justify-center items-center rounded-full overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-[#0d8567] opacity-0 group-hover:opacity-30 rounded-full transition-opacity duration-300 ease-out" />
                   <Image
@@ -85,7 +87,7 @@ export default function Header({ profile }: HeaderProps) {
                       aspectRatio: item.aspectRatio || 1,
                     }}
                   />
-                </Link>
+                </button>
               ))}
             </nav>
 
@@ -132,11 +134,13 @@ export default function Header({ profile }: HeaderProps) {
         >
           <nav className="flex flex-col gap-2">
             {NAV_ITEMS.map((item, index) => (
-              <Link
+              <button
                 key={index}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="group relative py-3 flex items-center gap-3.5 rounded-lg overflow-hidden"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  item.onClick();
+                }}
+                className="cursor-pointer group relative py-3 flex items-center gap-3.5 rounded-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[#0d8567] opacity-0 group-hover:opacity-20 transition-opacity duration-300 ease-out" />
                 <Image
@@ -151,11 +155,13 @@ export default function Header({ profile }: HeaderProps) {
                   }}
                 />
                 <p>{item.label}</p>
-              </Link>
+              </button>
             ))}
           </nav>
         </div>
       </div>
+
+      <BudgetingModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
     </header>
   );
 }
